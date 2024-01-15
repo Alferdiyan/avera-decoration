@@ -1,10 +1,13 @@
 import Image from "next/image";
-import DecorList from "./components/DecorList";
+import DecorList from "./components/DecorLamaran";
 import Hero from "./components/Hero";
-import Header from "./components/DecorList/Header";
+import Header from "./components/DecorLamaran/Header";
 import bg from "../../public/backgorund/background.webp";
 import Service from "./components/Service";
 import Testimonial from "./components/Testimonial";
+import DecorLamaran from "./components/DecorLamaran";
+import DekorAkad from "./components/DecorAkad";
+import WeddingDecoration from "./components/DecorWedding";
 
 export default function Home() {
     return (
@@ -22,38 +25,37 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="top-72 w-full absolute">
+            {/* <div className="top-72 w-full absolute">
                 <Service />
-            </div>
+            </div> */}
 
-            <section></section>
-            <section className="relative ">
+            <section className="relative " id="lamaran">
                 <Header
                     title="Dekorasi Lamaran"
                     LinkHref="/decorLamaran"
                     LinkTitle="Lihat Semua"
                 />
-                <DecorList />
+                <DecorLamaran />
             </section>
-            <section>
+            <section id="akad">
                 <Header
                     title="Dekorasi Akad"
                     LinkHref="/decorAkad"
                     LinkTitle="Lihat Semua"
                 />
-                <DecorList />
+                <DekorAkad />
             </section>
-            <section className="py-10 ">
+            <section className="py-10 " id="wedding">
                 <Header
-                    title="Dekorasi Ulang tahun"
+                    title="Dekorasi Weddding"
                     LinkHref="/decorLamaran"
                     LinkTitle="Lihat Semua"
                 />
-                <DecorList />
+                <WeddingDecoration />
             </section>
-            <section>
+            {/* <section>
                 <Testimonial />
-            </section>
+            </section> */}
         </main>
     );
 }

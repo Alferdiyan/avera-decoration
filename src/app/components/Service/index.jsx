@@ -12,6 +12,7 @@ export default function Service() {
                 {servicesData.map((service, index) => (
                     <ServicesCard
                         key={index}
+                        logo={service.logo}
                         judul={service.judul}
                         description={service.description}
                     />
